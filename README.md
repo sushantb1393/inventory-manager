@@ -14,15 +14,51 @@
 
 **Customer Goal**: A scalable web application to manage product inventory across multiple warehouses. The app should be developed in Python (Flask), containerized using Docker, deployed on EKS, and managed through a CI/CD pipeline using Jenkins and Terraform.
 
+### Clone Repo
+```
+git clone https://github.com/atulkamble/Inventory-Manager.git
+cd Inventory-Manager
+```
 ---
-
 ## 🧩 PHASE 1: DEVELOPMENT ENVIRONMENT
 
+### Instance Details:
+```
+name - server
+t3.medium 
+key.pem 
+SG: ssh-22, http-80, https-443
+amazon linux 
+ssd - 25 GB - gp3
+```
+### Connect with Instance 
+```
+cd Downloads 
+chmod 400 key.pem 
+ssh -i "key.pem" ec2-user@ec2-18-206-204-23.compute-1.amazonaws.com
+```
+### Update and Install Dependecies
+```
+sudo dnf update 
+sudo dnf install python tree git docker -y
+
+git config --global user.name "Atul Kamble"
+git config --global user.email "atul_kamble@hotmail.com"
+git config --list
+
+git remote set-url origin https://atulkamble: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@github.com/atulkamble/Inventory-Manager.git
+
+sudo systemctl start docker 
+sudo systemctl enable docker 
+sudo docker login 
+```
 ### ✅ Customer Requirements:
 
 * Rapid Python web app development
 * Local testing with Docker
 * Source code versioned with Git
+
+
 
 ### 📁 Project Structure:
 
@@ -224,7 +260,7 @@ if __name__ == "__main__":
 ```bash
 cd /home/ec2-user/Inventory-Manager/01-dev/
 python3 -m venv venv
-source venv/bin/activate  # on Windows: venv\Scripts\activate
+source venv/bin/activate # on Windows: venv\Scripts\activate
 pip install -r requirements.txt
 python main.py
 ```
