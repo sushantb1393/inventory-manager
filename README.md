@@ -108,8 +108,8 @@ def delete_item(item_id):
     inventory = [item for item in inventory if item['id'] != item_id]
     return redirect(url_for('index'))
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000, debug=True)
 ```
 
 ---
@@ -222,27 +222,13 @@ if __name__ == '__main__':
 ### ✅ How to Run
 
 ```bash
-cd inventory-manager/app
+cd /home/ec2-user/Inventory-Manager/01-dev/
 python3 -m venv venv
 source venv/bin/activate  # on Windows: venv\Scripts\activate
 pip install -r requirements.txt
 python main.py
 ```
 ---
-
-### 🧪 Sample Python Code: `main.py`
-
-```python
-from flask import Flask
-app = Flask(__name__)
-
-@app.route('/')
-def hello():
-    return "Inventory Manager - Dev"
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-```
 
 ### 🐳 Dockerfile:
 
