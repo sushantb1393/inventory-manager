@@ -1,0 +1,90 @@
+ # === PYTHON ===
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+.venv/
+venv/
+env/
+Pipfile.lock
+poetry.lock
+.mypy_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Jupyter Notebook
+*.ipynb_checkpoints
+
+# Logs
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# === DOCKER ===
+*.tar
+*.bak
+docker-compose.override.yml
+.dockerignore
+
+# Docker volumes and other temp data
+volumes/
+tmp/
+*.pid
+
+# === KUBERNETES ===
+*.yaml~
+*.yml~
+kubeconfig
+.kube/
+
+# Avoid accidentally committing secrets
+secrets.yaml
+*.secret
+*.key
+*.crt
+
+# === JENKINS ===
+*.jenkins
+*.hpi
+*.jpi
+*.bak
+*.old
+workspace/
+target/
+lastStable*
+lastSuccessful*
+
+# Jenkins Pipeline logs or backup
+*.log
+*.tmp
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+
+# === Git ===
+*.orig
+*.rej
+*.swo
+*.swp
+*.patch
+*.diff
+
+# === ENV VARS and LOCAL CONFIG ===
+.env.local
+.env.development
+.env.production
+.env.test
+
+# === TEST FILES ===
+coverage/
+.tox/
+.nox/
+htmlcov/
