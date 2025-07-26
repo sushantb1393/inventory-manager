@@ -269,9 +269,9 @@ python main.py
 ### 🐳 Dockerfile:
 
 ```dockerfile
-FROM python:3.10
+FROM python:3.10                                                 
 WORKDIR /app
-COPY . .
+COPY app/ /app/
 RUN pip install -r requirements.txt
 CMD ["python", "main.py"]
 ```
@@ -279,8 +279,13 @@ CMD ["python", "main.py"]
 ### ✅ Commands:
 
 ```bash
-docker build -t inventory-dev .
-docker run -p 5000:5000 inventory-dev
+cd /home/ec2-user/Inventory-Manager/01-dev
+sudo docker build -t atuljkamble/inventory-dev .
+sudo docker images
+sudo docker push atuljkamble/inventory-dev
+sudo docker run -d -p 5000:5000 atuljkamble/inventory-dev
+sudo docker container ls
+sudo docker container stop 62bcca5a4efe
 ```
 
 ---
