@@ -349,12 +349,16 @@ Open your browser and go to:
 
 ```
 http://<YOUR_EC2_PUBLIC_IP>:8080
+
+http://18.206.204.23:8080
 ```
 
 Unlock Jenkins using the initial admin password:
 
 ```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+f525a305e9864c96a7f0cdb18ee99875
 ```
 
 Paste the password into the Jenkins setup screen and proceed.
