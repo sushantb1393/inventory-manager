@@ -300,6 +300,68 @@ sudo docker container stop 62bcca5a4efe
 * Infrastructure as Code via Terraform
 * Hosted on AWS EKS
 
+
+
+### 1. Install Java (Amazon Corretto 21)
+
+```bash
+sudo dnf install java-21-amazon-corretto -y
+java --version
+```
+
+### 2. Install Maven
+
+```bash
+sudo yum install maven -y
+mvn -v
+```
+
+### 3. Install Jenkins
+
+```bash
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo yum upgrade -y
+sudo yum install jenkins -y
+jenkins --version
+```
+
+### 4. Add Jenkins User to Docker Group
+
+```bash
+sudo usermod -aG docker jenkins
+```
+
+---
+
+## ▶️ Step 5: Start Jenkins
+
+```bash
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+```
+
+---
+
+## 🌐 Step 6: Access Jenkins Web UI
+
+Open your browser and go to:
+
+```
+http://<YOUR_EC2_PUBLIC_IP>:8080
+```
+
+Unlock Jenkins using the initial admin password:
+
+```bash
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+Paste the password into the Jenkins setup screen and proceed.
+
+---
+
+## ✅ Jenkins is now ready to use!
 ---
 
 ### 🧰 Jenkins CI/CD Pipeline
