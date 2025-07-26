@@ -366,6 +366,22 @@ Paste the password into the Jenkins setup screen and proceed.
 ---
 
 ## ✅ Jenkins is now ready to use!
+
+## Configurations 
+
+#### Install Suggested Plugins 
+
+username: admin
+passowrd: Admin@123
+Full Name: Atul Kamble
+email: atul_kamble@hotmail.com
+
+Instance Configuration: http://18.206.204.23:8080/
+
+Save and Finish
+
+####  Start using Jenkins 
+
 ---
 
 ### 🧰 Jenkins CI/CD Pipeline
