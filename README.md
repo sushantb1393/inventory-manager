@@ -27,7 +27,7 @@ cd Inventory-Manager
 name - server
 t3.medium 
 key.pem 
-SG: ssh-22, http-80, https-443
+SG: ssh-22, http-80, https-443, flask-5000, jenkins-8080
 amazon linux 
 ssd - 25 GB - gp3
 ```
