@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<a href="{{ url_for('add_item') }}" class="btn btn-primary mb-3">➕ Add Item</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th><th>Name</th><th>Quantity</th><th>Price</th><th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in inventory %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>${{ '%.2f'|format(item.price) }}</td>
+            <td>
+                <a href="{{ url_for('edit_item', item_id=item.id) }}" class="btn btn-warning btn-sm">✏️ Edit</a>
+                <a href="{{ url_for('delete_item', item_id=item.id) }}" class="btn btn-danger btn-sm">🗑️ Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

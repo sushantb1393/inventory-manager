@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h3>Add New Item</h3>
+<form method="POST">
+    <div class="mb-3">
+        <label>Name</label>
+        <input type="text" name="name" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Quantity</label>
+        <input type="number" name="quantity" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Price</label>
+        <input type="number" name="price" step="0.01" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-success">Add Item</button>
+</form>
+{% endblock %}
