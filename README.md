@@ -382,6 +382,27 @@ Save and Finish
 
 ####  Start using Jenkins 
 
+
+### ECR 
+```
+cd /Users/atul/Downloads/Inventory-Manager/01-dev
+```
+// docker engine in running state 
+
+ECR >> Public Repo >> Create Repo
+
+Repository name: atulkamble
+URI: public.ecr.aws/x4u2n2b1/atulkamble
+Image name: inventory-manager:staging
+```
+docker build -t inventory-manager:staging .
+
+docker tag inventory-manager:staging public.ecr.aws/x4u2n2b1/atulkamble:staging
+
+aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
+
+docker push public.ecr.aws/x4u2n2b1/atulkamble:staging
+```
 ---
 
 ### 🧰 Jenkins CI/CD Pipeline
