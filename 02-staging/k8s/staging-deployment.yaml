@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inventory-prod
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: inventory
+  template:
+    metadata:
+      labels:
+        app: inventory
+    spec:
+      containers:
+        - name: inventory-app
+          image: public.ecr.aws/x4u2n2b1/atulkamble:staging
+          ports:
+            - containerPort: 5000
