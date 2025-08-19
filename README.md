@@ -1,4 +1,80 @@
-**AWS DevOps project plan** from **Development → Staging → Production**, with tools including **Python, Git, Docker, Jenkins, Kubernetes, Terraform**, and includes:
+# 🚀 AWS DevOps Project: Inventory Manager
+
+**Objective:** Designed and deployed a **scalable inventory management web application** using modern DevOps practices, implementing a full lifecycle pipeline from **Development → Staging → Production** on AWS.
+
+---
+
+## 🔧 **Tech Stack**
+
+* **Languages & Frameworks:** Python (Flask), HTML (Jinja2 templates)
+* **Containerization:** Docker
+* **Orchestration:** Kubernetes (EKS)
+* **CI/CD:** Jenkins Pipelines
+* **Infrastructure as Code (IaC):** Terraform
+* **Monitoring:** Prometheus, Grafana, CloudWatch
+
+---
+
+## 📌 **Customer Requirement**
+
+A multi-warehouse **Inventory Manager** app for CRUD operations, containerized and deployed on AWS with:
+✅ CI/CD automation
+✅ Scalable Kubernetes workloads
+✅ IaC provisioning
+✅ Monitoring & high availability
+
+---
+
+## 🧩 **Project Phases**
+
+### 🔹 **Phase 1: Development**
+
+* Built a Python Flask app with CRUD operations.
+* Containerized using Docker & tested locally.
+* Version control via GitHub.
+
+### 🔹 **Phase 2: Staging**
+
+* Set up **Jenkins CI/CD pipeline**: clone → build → push to ECR → deploy to EKS.
+* Provisioned AWS infra (VPC, EKS, IAM) using Terraform.
+* Deployed staging workloads on Kubernetes for QA.
+
+### 🔹 **Phase 3: Production**
+
+* Deployed multi-replica workloads on AWS EKS.
+* Implemented **Blue/Green deployments** via Jenkins & Kubernetes.
+* Configured **Prometheus + Grafana** for metrics and **CloudWatch** for centralized logging.
+* Enabled scalability & high availability with AWS ALB Ingress Controller.
+
+---
+
+## 🗂 **Repository Structure**
+
+```
+inventory-manager/
+├── app/                # Flask app with CRUD templates
+├── Dockerfile          # Containerization
+├── Jenkinsfile         # CI/CD pipeline
+├── terraform/          # AWS Infra (Dev/Staging/Prod)
+├── k8s/                # Kubernetes manifests
+└── docs/               # Architecture & setup docs
+```
+
+---
+
+## 🏆 **Key Outcomes**
+
+* Automated **code-to-deployment pipeline** with Jenkins.
+* Scalable, production-ready app deployed on **AWS EKS**.
+* Standardized **IaC provisioning** using Terraform.
+* Achieved **seamless Dev → Staging → Prod rollout** with monitoring & HA.
+
+---
+
+👉 **GitHub Repo:** [Inventory Manager](https://github.com/atulkamble/Inventory-Manager)
+
+---
+
 
 * ✅ Phases with customer requirements
 * ✅ Code snippets
