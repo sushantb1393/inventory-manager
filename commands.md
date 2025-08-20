@@ -45,4 +45,36 @@ sudo docker compose up --build
 
 http://instance-ip:5000
 
+cd k8s 
+
+// on minikube 
+
+// docker desktop running in background 
+
+minikube start
+
+kubetcl apply -f deployment.yaml 
+kubectl apply -f service.yaml 
+
+kubectl get deployments 
+kubectl get pods
+kubectl get services 
+
+minikube dashboard 
+
+http://127.0.0.1:5000/
+
+// on eks 
+
+eksctl create cluster \
+--name mycluster \
+--region us-east-1 \
+--nodegroup-name mynodes \
+--node-type t3.micro \
+--nodes 2 \
+--nodes-min 2 \
+--nodes-max 2 \
+--managed
+
+eksctl create cluster --name mycluster --region us-east-1 --nodegroup-name mynodes --node-type t3.micro --nodes 2 --nodes-min 2 --nodes-max 2 --managed
 ```
