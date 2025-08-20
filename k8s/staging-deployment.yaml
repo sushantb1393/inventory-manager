@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: inventory-app
-          image: public.ecr.aws/x4u2n2b1/atulkamble:staging
+          image: docker.io/atuljkamble/inventory-management:latest
           ports:
             - containerPort: 5000
