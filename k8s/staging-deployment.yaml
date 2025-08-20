@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: inventory-app
-          image: docker.io/atuljkamble/inventory-management:latest
+          image: docker.io/atuljkamble/inventory-manager:latest
           ports:
             - containerPort: 5000
