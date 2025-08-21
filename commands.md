@@ -77,4 +77,64 @@ eksctl create cluster \
 --managed
 
 eksctl create cluster --name mycluster --region us-east-1 --nodegroup-name mynodes --node-type t3.micro --nodes 2 --nodes-min 2 --nodes-max 2 --managed
+
+stop >> Setting >> Change Instance type >> large
+
+EC2 | amazon linux | large instance type 
+SG: 8080 
+
+sudo yum update -y 
+sudo yum install git -y 
+git clone https://github.com/atulkamble/inventory-manager.git
+cd inventory-manager
+chmod +x jenkins-install.sh 
+./jenkins-install.sh 
+
+copy password from shell path & paste in web browser - http://instance-ip:8080
+
+git config --global user.name "Atul Kamble"
+git config --global user.email "atul_kamble@hotmail.com"
+git config --list 
+sudo systemctl status docker
+java --version 
+mvn -v 
+
+// set username and password - admin, admin 
+
+Settings >> plugins >> docker, docker pipeline, Blue Ocean
+
+tools Setting >> git, myMaven, myDocker | Select Install automatically 
+
+sudo systemctl restart jenkins 
+
+New Item >> create pipeline >> paste following script >> build 
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                sh 'git --version'
+                sh 'docker --version'
+            }
+        }
+    }
+}
+
+IAM >> user >> admin group >> policy (FullAdminAccess)
+
+create access key and add it to ec2 
+
+aws configure 
+
+>> ECR 
+
+URI >> public.ecr.aws/x4u2n2b1
+
+docker build -t public.ecr.aws/x4u2n2b1/atulkamble/inventory-manager:latest .
+
+docker push public.ecr.aws/x4u2n2b1/atulkamble/inventory-manager:latest 
+
 ```
