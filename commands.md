@@ -131,7 +131,9 @@ aws configure
 
 sudo usermod -aG docker ec2-user
 
->> ECR 
+>> ECR
+
+Repo Name: atulkamble/inventory-manager
 
 URI >> public.ecr.aws/x4u2n2b1
 
