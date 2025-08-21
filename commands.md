@@ -127,7 +127,9 @@ IAM >> user >> admin group >> policy (FullAdminAccess)
 
 create access key and add it to ec2 
 
-aws configure 
+aws configure
+
+sudo usermod -aG docker ec2-user
 
 >> ECR 
 
