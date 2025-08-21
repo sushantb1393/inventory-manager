@@ -22,8 +22,8 @@ pipeline {
     stage('Deploy to EKS') {
       steps {
         sh 'git clone https://github.com/atulkamble/inventory-manager.git'
-        sh ' cd 02-staging/k8s'
-        sh 'kubectl apply -f k8s/staging-deployment.yaml'
+        sh ' cd k8s'
+        sh 'kubectl apply -f k8s'
       }
     }
   }
