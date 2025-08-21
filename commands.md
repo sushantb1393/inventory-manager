@@ -10,8 +10,8 @@ sudo yum update -y
 sudo yum install git python -y 
 sudo yum install pip 
 pip install flask
-git clone https://github.com/atulkamble/Inventory-Manager.git
-cd /Inventory-Manager
+git clone https://github.com/atulkamble/inventory-manager.git
+cd /inventory-manager
 cd app
 python3 main.py
 
