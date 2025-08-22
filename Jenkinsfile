@@ -6,7 +6,7 @@ pipeline {
   }
   environment {
     REGISTRY        = 'docker.io'
-    DOCKERHUB_REPO  = 'atuljkamble/inventory-manager'       // <— your Docker Hub repo
+    DOCKERHUB_REPO  = 'sushantb1393@gmail.com/inventory-manager'       // <— your Docker Hub repo
     IMAGE_TAG       = "${env.BRANCH_NAME ?: 'main'}-${env.BUILD_NUMBER}"
     FULL_IMAGE      = "${env.DOCKERHUB_REPO}:${env.IMAGE_TAG}"
   }
