@@ -14,7 +14,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'main', url: 'https://github.com/atulkamble/inventory-manager.git'
+        git branch: 'main', url: 'https://github.com/sushantb1393/inventory-manager.git'
       }
     }
 
